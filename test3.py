@@ -1,3 +1,4 @@
+"""
 import urllib.request
 
 url1 = "https://i.pinimg.com/736x/3c/7d/46/3c7d467e5831894576a66afa954876b8.jpg"
@@ -9,3 +10,16 @@ say = 1
 for url in urllistesi:
     urllib.request.urlretrieve(url, "Resim"+str(say)+".jpg")
     say += 1
+"""
+
+sayi1 = input("sayı1:")
+sayi2 = input("sayı2:")
+
+try:
+    sayi1 = int(sayi1)
+    sayi2 = int(sayi2)
+    print(sayi1/sayi2)
+except ValueError:
+    print("lüten 10'luk tabanda bir ayı girin.")
+except ZeroDivisionError:
+    print("bir sayı 0'a bölünmez.")
