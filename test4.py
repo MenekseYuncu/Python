@@ -1,0 +1,1 @@
+print("tamam yav")
