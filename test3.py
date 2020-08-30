@@ -10,7 +10,8 @@ say = 1
 for url in urllistesi:
     urllib.request.urlretrieve(url, "Resim"+str(say)+".jpg")
     say += 1
-"""
+
+
 
 sayi1 = input("sayı1:")
 sayi2 = input("sayı2:")
@@ -23,3 +24,14 @@ except ValueError:
     print("lüten 10'luk tabanda bir ayı girin.")
 except ZeroDivisionError:
     print("bir sayı 0'a bölünmez.")
+
+
+
+# w =Yaz - Yazmak için bir dosya açar, yoksa dosyayı oluşturur
+# r = Oku - Varsayılan değer. Okumak için bir dosya açar, dosya yoksa hata
+# a =Ekle - Eklemek için bir dosya açar, yoksa dosyayı oluşturur
+
+dosya = open("yazilim.txt", "a")
+
+dosya.write("how are you")
+"""
