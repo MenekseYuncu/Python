@@ -34,4 +34,12 @@ except ZeroDivisionError:
 dosya = open("yazilim.txt", "a")
 
 dosya.write("how are you")
+
+
+
+with open("yazilim.txt", "r+") as dosya:
+    data = dosya.readlines()
+    data.insert(1, "welcome\n")
+    dosya.seek(0)
+    dosya.writelines(data)
 """
