@@ -1,6 +1,5 @@
-f = open("demofile3.txt", "w")
-f.write("içeriği sildim")
-f.close()
-
-f = open("demofile.txt", "r")
-print(f.readline())
+with open("yazilim.txt", "r+") as dosya:
+    data = dosya.readlines()
+    data.insert(1, "welcome\n")
+    dosya.seek(0)
+    dosya.writelines(data)
