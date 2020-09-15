@@ -1,3 +1,4 @@
+"""
 # sqlite veri tabanı
 import sqlite3
 
@@ -20,3 +21,40 @@ def degerekle():
 
 tabloolustur()
 degerekle()
+"""
+
+
+import sqlite3
+import random
+import time
+import datetime
+
+con = sqlite3.connect("dersler.db")
+
+cursor = con.cursor()
+
+
+def tabloolustur():
+    cursor.execute(
+        "CREATE TABLE IF NOT EXISTS Tablo1 (zaman Real,tarih Text,anahtarkelime Text,deger Real)")
+
+
+def rastgeledegerekle():
+    zaman = time.time()
+    tarih = str(datetime.datetime.fromtimestamp(
+        zaman).strftime('%Y-%m-%D $H:$M:$S'))
+    anahtarkelime = "Python3 Sqlite"
+    deger = random.randrange(0, 5)
+    cursor.execute("INSERT INTO Tablo1 (zaman,tarih,anahtarkelime,deger) VALUES (?,?,?,?)",
+                   (zaman, tarih, anahtarkelime, deger))
+
+
+con.commit()
+
+tabloolustur()
+i = 0
+while (i < 5):
+    rastgeledegerekle()
+    time.sleep(2)
+    i += 1
+con.close()
