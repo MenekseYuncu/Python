@@ -65,3 +65,7 @@ def degerlerial():
     data = cursor.fetchall()
     for i in data:
         print(i)
+
+
+degerlerial()
+tabloolustur()
