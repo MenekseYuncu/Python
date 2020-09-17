@@ -47,14 +47,21 @@ def rastgeledegerekle():
     deger = random.randrange(0, 5)
     cursor.execute("INSERT INTO Tablo1 (zaman,tarih,anahtarkelime,deger) VALUES (?,?,?,?)",
                    (zaman, tarih, anahtarkelime, deger))
+    con.commit()
 
-
-con.commit()
 
 tabloolustur()
 i = 0
 while (i < 5):
     rastgeledegerekle()
-    time.sleep(2)
+    time.sleep(1)
     i += 1
 con.close()
+
+
+def degerlerial():
+    cursor.execute("SELECT * FROM Tablo1 Where deger = 2.0")
+
+    data = cursor.fetchall()
+    for i in data:
+        print(i)
