@@ -67,5 +67,24 @@ def degerlerial():
         print(i)
 
 
+def silveguncelle():
+    cursor.execute("SELECT * FROM Tablo1")
+
+    data = cursor.fetchall()
+    print("ILK DEGERLER ..............")
+    for i in data:
+        print(i)
+
+    cursor.execute("UPDATE Tablo1 SET deger = 66 WHERE deger = 2")
+
+    cursor.execute("SELECT * FROM Tablo1")
+
+    data = cursor.fetchall()
+    print("Guncellendikten sonra...........")
+    for i in data:
+        print(i)
+
+
+silveguncelle()
 degerlerial()
 tabloolustur()
