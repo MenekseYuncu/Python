@@ -101,6 +101,16 @@ while (i < 10):
     dusmanlar.append(yenidusman)
 
     i += 1
-
+"""
 for dusman in dusmanlar:
-    dusman.print()
+    dusman.print()"""
+
+i = 0
+while(i < 3):
+    randomdusman1 = random.randrange(0, 10)
+    randomdusman2 = random.randrange(0, 10)
+
+    donendeger = dusmanlar[randomdusman1].saldir()
+    dusmanlar[randomdusman2].saldiriyaugra(donendeger[0], donendeger[1])
+    print(" RAUND BİTTİ ***")
+i += 1
