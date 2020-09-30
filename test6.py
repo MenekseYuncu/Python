@@ -1,5 +1,5 @@
 #Inheritance (kalıtım)
-
+"""
 class ogrenci ():
     def __init__(self, isim, sinif, numara, staj_parasi):
 
@@ -43,3 +43,23 @@ Ogretmen = Ogretmen("Mahmut", 4, 666, 2500, 20)
 Ogretmen.bilgilerigoster()
 Ogretmen.issayisiartir(10)
 Ogretmen.bilgilerigoster()
+"""
+
+
+class ogrenci():
+    def derscalis(self):
+        print("öğrenci şu anda ders çalışıyor")
+
+
+class calisan():
+    def calis(self):
+        print("personel şu anda çalısıyo")
+
+
+class yazilimci():
+    pass
+
+
+yazilimci = yazilimci()
+yazilimci.derscalis()
+yazilimci.calisan()
