@@ -56,10 +56,10 @@ class calisan():
         print("personel şu anda çalısıyo")
 
 
-class yazilimci():
+class yazilimci(ogrenci, calisan):
     pass
 
 
 yazilimci = yazilimci()
 yazilimci.derscalis()
-yazilimci.calisan()
+yazilimci.calis()
